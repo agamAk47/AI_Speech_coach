@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Practice AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span style="font-size: 1.2em;">🎙️</span> AI SPEECH COACH</h1>
+            <p style="font-weight: 700;">Improve your speaking skills with AI-powered feedback</p>
+        </header>
+
+        <div class="progress-section">
+            <div class="progress-container">
+                <h3>Session Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="exercise-navigation">
+                    <button id="prev-exercise" class="nav-btn" disabled>← Previous</button>
+                    <p class="progress-text">Completed: <span id="completed-exercises">0</span> of <span id="total-exercises">5</span></p>
+                    <button id="next-exercise" class="nav-btn">Next →</button>
+                </div>
+            </div>
+            <div class="overall-stats">
+                <h3>Overall Performance</h3>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-label">Average Accuracy</span>
+                        <span class="stat-value" id="avg-accuracy">0%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Improvement</span>
+                        <span class="stat-value" id="improvement">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div class="text-container">
+                <h2>Practice Text</h2>
+                <div id="practice-text" class="practice-text">
+                    <p>Loading practice text...</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="btn">Start Recording</button>
+                <button id="stop-btn" class="btn" disabled>Stop Recording</button>
+                <button id="repeat-btn" class="btn" disabled>Repeat Exercise</button>
+                <button id="new-text-btn" class="btn">New Exercise</button>
+            </div>
+
+            <div class="recording-status">
+                <div id="recording-indicator" class="hidden">
+                    <span class="recording-dot"></span>
+                    Recording in progress...
+                </div>
+                <div id="repeating-status" class="repeating-status hidden">
+                    Repeating Exercise
+                </div>
+            </div>
+
+            <div class="feedback-container">
+                <h2>AI Feedback</h2>
+                <div id="feedback" class="feedback">
+                    <p>Your feedback will appear here after recording.</p>
+                </div>
+                <div id="audio-player-container" class="audio-player-container hidden">
+                    <h3>Your Recording</h3>
+                    <audio id="audio-player" controls></audio>
+                    <button id="download-btn" class="btn download-btn">Download Recording</button>
+                </div>
+                <div id="accuracy-score" class="accuracy-score hidden">
+                    <h3>Accuracy Score</h3>
+                    <div class="score-bar">
+                        <div class="score-fill" id="score-fill"></div>
+                    </div>
+                    <p class="score-text">Accuracy: <span id="accuracy-value">0</span>%</p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Completion Page -->
+        <div id="completion-page" class="completion-page hidden">
+            <div class="completion-content">
+                <h2>🎉 Congratulations! 🎉</h2>
+                <p>You've successfully completed all exercises!</p>
+                <div class="final-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Final Average Accuracy</span>
+                        <span class="stat-value" id="final-avg-accuracy">0%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Overall Improvement</span>
+                        <span class="stat-value" id="final-improvement">0%</span>
+                    </div>
+                </div>
+                <div class="exercise-scores">
+                    <h3>Exercise Scores</h3>
+                    <div id="exercise-scores-list"></div>
+                </div>
+                <div class="completion-actions">
+                    <button id="start-new-session" class="btn">Start New Session</button>
+                    <button id="download-summary" class="btn">Download Summary</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
