@@ -1,6 +1,6 @@
 // Replace with your Gemini API key
-const GEMINI_API_KEY = "AIzaSyBYE4hRDfskZ9bxY1avf972xnwQGIQuYaQ"
-const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+const GEMINI_API_KEY = ""
+const GEMINI_API_URL = ""
 
 // Sample practice texts
 const practiceTexts = [
